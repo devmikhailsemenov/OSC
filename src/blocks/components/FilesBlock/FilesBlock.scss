@@ -1,0 +1,138 @@
+.files-block {
+	position: relative;
+	border-top: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	// padding-top: 5px;
+	cursor: pointer;
+
+	&--active {
+		background-color: #fff;
+		border-color: #000;
+
+		.files-block__list {
+			margin-top: 10px;
+			margin-bottom: -15px
+		}
+
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&__label {
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+		cursor: pointer;
+
+		&::before {
+	    content: url(../img/socket-icon.svg);
+	    line-height: 10px;
+    	margin-right: 5px;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&__list {
+		// margin-bottom: -15px;
+	}
+
+	&__item {
+		font-weight: 700;
+		margin-bottom: 15px;
+		opacity: 1;
+	}
+
+	&__item-content {
+		opacity: 1;
+		transform: translateX(0);
+		transition: opacity .5s ease, transform .5s ease;
+
+		&--hide {
+			opacity: 0;
+			transform: translateX(-100px);
+		}
+	}
+
+	&__item-inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item--error {
+		color: #f42020;
+
+		.files-block__remove-btn {
+    	path {
+    		fill: red;
+    	}
+    }
+	}
+
+	&__remove-btn {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		cursor: pointer;
+
+		svg {
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__item-format, &__item-size {
+		margin-right: 15px;
+	}
+
+	&__error {
+		margin-left: 15px;
+		font-size: 12px;
+
+	}
+
+	.numbered-lines__numbers {
+		padding-top: 0;
+		line-height: 20px;
+	}
+}
+
+
+@include min(992px) {
+	.files-block {
+
+		&__label {
+			font-size: 20px;
+			line-height: 27px;
+
+			&::before {
+				margin-right: 8px;
+			}
+		}
+
+		&__item {
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		&__remove-btn {
+			width: 16px;
+			height: 16px;
+		}
+
+		&__error {
+			margin-left: 15px;
+		}
+
+		.numbered-lines__numbers {
+			line-height: 27px;
+		}
+
+	}
+}

@@ -1,0 +1,95 @@
+extends ../layouts/default
+
+block meta
+	title Менеджер по продажам
+
+block content
+	+MainScreen({ home: false })
+		block mainScreenTitle
+			h1(class=`numbered-lines__descr main-screen__title section-title wow`)
+				pre.section-title__typing.pre-text(id='typed-title-1').
+					#[span.section-title__selected-words #[span Менеджер]]
+					по продажам
+
+		block mainScreenDescription
+			pre.numbered-lines__descr.animate-line-text.animate-line-text--hide.wow.
+				&lt;--город Москва--&gt;
+	section.vacancy-one
+		.container
+			.section-content
+				.vacancy-one__descr-item
+					h3.vacancy-one__item-title.content-highlight #[span Что нужно будет делать]
+					ul.vacancy-one__list
+						li.vacancy-one__item обработка лидов, поступающих в виде заявок и звонков напрямую или от партнерской сети
+						li.vacancy-one__item проведение переговоров по почте, телефону, мессенджерам
+						li.vacancy-one__item проведение встреч с клиентами и их представителями
+						li.vacancy-one__item постановка задач тех.отделу на оценку проектов
+						li.vacancy-one__item ведение клиентов в CRM Битрикс24
+						li.vacancy-one__item заключение договоров, получение первой оплаты
+						li.vacancy-one__item подробная передача проекта аккаунтам после совершения продажи
+
+				.vacancy-one__descr-item
+					h3.vacancy-one__item-title.content-highlight #[span Здорово, если у вас есть]
+					ul.vacancy-one__list
+						li.vacancy-one__item базовые знания в области Интернет-технологий
+						li.vacancy-one__item навыки проведения переговоров, презентаций, деловой переписки
+						li.vacancy-one__item грамотный устный и письменный русский язык
+						li.vacancy-one__item нацеленность на результат
+						li.vacancy-one__item коммуникабельность, трудолюбие, ответственность, стрессоустойчивость
+						li.vacancy-one__item опыт продаж услуг в сфере веб-разработки или интернет-маркетинга
+
+				.vacancy-one__descr-item
+					h3.vacancy-one__item-title.content-highlight #[span Условия]
+					ul.vacancy-one__list
+						li.vacancy-one__item заработная плата от 75 000 руб
+						li.vacancy-one__item полный рабочий день
+						li.vacancy-one__item система мотивации, включает вознаграждение за новых и за переданных аккаунтам клиентов
+
+	+Apply()
+		block title
+			h2(class=`numbered-lines__descr section-title wow`)
+				pre.pre-text.
+					#[span.section-title__selected-words #[span Хотите к нам?]]
+					Напишите
+		block form
+			+MainForm({
+				arrayFields: [
+					{
+						required: true,
+						name: 'vacancy',
+						label: 'вакансия',
+						id: 'vacancy-user',
+						errorText: 'укажите вакансию',
+						successText: 'вакансия'
+					},
+					{
+						required: true,
+						name: 'name',
+						label: 'введите имя',
+						id: 'name-user'
+					},
+					{
+						required: true,
+						name: 'phone',
+						label: 'введите телефон',
+						id: 'phone-user'
+					},
+					{
+						required: true,
+						name: 'email',
+						label: 'введите email',
+						id: 'email-user'
+					},
+					{
+						required: true,
+						name: 'message',
+						label: 'расскажите о себе',
+						id: 'message-user',
+						textarea: true,
+						errorText: 'расскажите о себе',
+						successText: 'спасибо, что рассказали о себе!'
+					}
+				],
+				filesBlockID: 'apply-files-block',
+				className: 'apply__main-form'
+			})

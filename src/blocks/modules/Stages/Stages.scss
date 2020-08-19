@@ -1,0 +1,119 @@
+.stages {
+	padding: 50px 0 0;
+
+	&__title-wrap {
+		margin-bottom: 13px;
+
+		.pre-text {
+			white-space: normal;
+		}
+	}
+
+	&__description {
+		padding-left: 28px;
+		margin-bottom: 40px;
+	}
+
+	&__row {
+		padding-bottom: 10px;
+	}
+
+	&__col {
+		padding-right: 30px;
+
+		&:last-child {
+			padding-right: 26px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&__card {
+		width: 220px;
+		flex: 1 0 0;
+
+		.card__content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+	}
+
+	&__company-name {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	&__item-text {
+		flex: 1 0 0;
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 10px;
+	}
+
+}
+
+@include min(992px) {
+	.stages {
+		padding: 232px 0 0;
+
+		&__title-wrap {
+			margin-bottom: 40px;
+
+			.pre-text {
+				white-space: pre;
+			}
+		}
+
+		&__description {
+			padding-left: 115px;
+			margin-bottom: 80px;
+		}
+
+		&__row {
+			flex-wrap: wrap;
+			margin-bottom: -100px;
+		}
+
+		&__col {
+			padding: 0 $gridIndent / 2;
+			flex: 0 0 50%;
+			max-width: 50%;
+			margin-bottom: 100px;
+		}
+
+		&__item-title {
+			margin-bottom: 18px;
+		}
+
+		&__card {
+			max-width: 310px;
+			width: 100%;
+			.card__content {
+				padding: 0;
+				border: none;
+			}
+
+			&::before, &::after {
+				display: none;
+			}
+		}
+
+		&__item-text {
+			font-size: 18px;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+@include min(1200px) {
+	.stages {
+		&__col {
+			padding: 0 20px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+extends layouts/default
+
+block meta
+	title Главная
+
+block content
+	+MainScreen({ home: true })
+		block mainScreenTitle
+			h1(class=`numbered-lines__descr main-screen__title main-screen__title--home-page section-title wow`)
+				pre.section-title__typing.pre-text(id='typed-title-1').
+					#[span.section-title__selected-words #[span Разработка]]
+					Сайты
+					Интеграция
+
+		block mainScreenDescription
+			pre.numbered-lines__descr.animate-line-text.animate-line-text--hide.wow.
+				&lt;--мы хорошо пишем код, верстаем сайты и сервисы уже более 10 лет
+				Разрабатывали интерфейсы для CRM-платформ, интернет-магазинов,
+				банков, для сферы недвижимости, благотворительности, промышленного
+				производства, логистики, туризма и многих других--&gt;
+
+	+AboutCompanyGroup()
+	+AboutTech()
+	+Stages()
+		block descriptionStages
+			pre.numbered-lines__descr.animate-line-text.animate-line-text--hide.wow.
+				&lt;--входим в группу компаний «СНЕГ», специализирующуюся
+				на комплексной разработке сайтов и сервисов--&gt;
+
+	+Apply()
+		block title
+			h2(class=`numbered-lines__descr section-title wow`)
+				pre.pre-text.
+					#[span.section-title__selected-words #[span Обращайтесь,]]
+					решим задачу
+		block form
+			+MainForm({
+				arrayFields: [
+					{ required: true, name: 'name', label: 'введите имя', id: 'name-user' },
+					{ required: true, name: 'phone', label: 'введите телефон', id: 'phone-user' },
+					{ required: true, name: 'email', label: 'введите email', id: 'email-user' },
+					{ name: 'message', label: 'расскажите о своем проекте', id: 'message-user', textarea: true }
+				],
+				filesBlockID: 'apply-files-block',
+				className: 'apply__main-form'
+			})

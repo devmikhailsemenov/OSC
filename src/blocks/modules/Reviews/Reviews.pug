@@ -1,0 +1,47 @@
+mixin Reviews()
+	section.reviews
+		.reviews__container.container
+			+PointsComputerIcon('reviews__points-computer-icon')
+			.reviews__title-wrap
+				+NumberedLines('numbered-lines-title')
+					h2(class=`numbered-lines__descr section-title wow`)
+						pre.pre-text.
+							<span class='section-title__selected-words'><span>Что говорят</span></span>
+							клиенты
+
+			.reviews__section-content.section-content
+				+Card('reviews__item').card--green.card--dotted
+					.reviews__item-name.content-highlight
+						span Олег Пивоваров
+					.reviews__item-position директор по интернет-маркетингу ООО «ППР»
+					p.reviews__item-text.
+						/«Работаем с 2015 года, сделали 4 сайта. Ребята решают любую задачу
+						по интеграции сайта с внешними сервисами, включая CRM, веб-аналитику, мессенджеры. Верстку всегда делают быстро и качественно. Удобно,
+						что можно общаться напрямую с программистами и верстальщиками через тикет-систему. Планируем и дальше вместе работать, всем рекомендую!»
+					.reviews__item-link
+						a(href='https://oltatravel.com/' class='content-link') oltatravel.com
+
+				+Card('reviews__item reviews__item--right').card--green.card--dotted
+					.reviews__item-name.content-highlight
+						span Павел Смирнов
+					.reviews__item-position основатель интернет-магазина Opp-Shop
+					p.reviews__item-text.
+						/«Первый раз обратились в 2013 году за разработкой нашего
+						интернет-магазина, а в 2018 — за редизайном. В том же году провели аналитику и выяснили, что посетителей с мобильного устройства от 90%, принято решение запустить мобильную версию, разработкой, которой занимались также компания OSC Programming. Сейчас коллеги
+						из «Технокод» занимаются технической поддержкой сайта. Количество задач увеличивается, но качество не снижается. Всем доволен, сотрудничать будем и дальше»
+					.reviews__item-link
+						a(href='https://opp-shop.ru/' class='content-link') opp-shop.ru
+
+				+Card('reviews__item').card--green.card--dotted
+					.reviews__item-name.content-highlight
+						span Инна Перова
+					.reviews__item-position менеджер по маркетингу Olta Travel
+					p.reviews__item-text.
+						/«ГК «СНЕГ» разработали нам новый сайт. В 2015 году Aidem создали дизайн, OSC Programming — верстку и интеграцию, а «Технокод»
+						уже 4 года осуществляют техническую поддержку. Ребята из ГК «СНЕГ» быстро реагируют на запросы, эффективно справляются с задачами, предлагают наиболее оптимальные пути их решения. Сайт запустили четыре года назад, но мы до сих пор получаем много положительных отзывов. Планируем продолжить сотрудничество в рамках будущих проектов»
+					.reviews__item-link
+						a(href='https://oltatravel.com/' class='content-link') oltatravel.com
+
+
+
+

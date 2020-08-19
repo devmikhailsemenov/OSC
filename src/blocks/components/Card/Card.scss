@@ -1,0 +1,169 @@
+.card {
+	position: relative;
+    // display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+    &::before, &::after {
+    	content: '';
+    	position: absolute;
+    	width: 100%;
+    	height: 100%;
+    	top: 10px;
+    	left: 10px;
+    }
+
+    &::before {
+    	z-index: 0;
+    	background-color: #000;
+    	opacity: .2;
+    }
+
+    &::after {
+    	z-index: -1;
+    	background: url('../img/bg_ds.svg') center;
+    }
+
+    &__content {
+    	position: relative;
+    	width: 100%;
+    	z-index: 2;
+    	padding: 20px;
+    	background: #fff;
+    	border: 3px solid #000;
+    }
+
+    &__list {
+    	font-size: 14px;
+    	line-height: 21px;
+    }
+
+    &__item {
+    	&::before {
+    		content: '/';
+    	}
+    }
+
+    &__highlight-title {
+    	font-size: 18px;
+    	line-height: 18px;
+    	margin-bottom: 4px;
+    }
+
+    &__descr {
+    	font-weight: 400;
+    }
+
+    &__link {
+    	line-height: 18px;
+    }
+
+    &__next-link {
+		display: inline-block;
+		width: 48px;
+		height: 20px;
+		background: url('../img/arrow-icon.svg') center/cover no-repeat;
+
+    }
+}
+
+.card--only-mobile {
+	@include min(992px) {
+		.card__content {
+			padding: 0;
+			border: none;
+		}
+
+		&::before, &::after {
+			display: none;
+		}
+	}
+}
+
+.card--dotted {
+	.card__content {
+		border: 3px dotted #000;
+	}
+}
+
+.card--green {
+	.card__content {
+		border-color: #3cd73a;
+	}
+
+	&::before {
+		background-color: #3cd73a;
+	}
+}
+
+.card--blue {
+	.card__content {
+		border-color: #222bfd;
+	}
+
+	&::before {
+		background-color: #222bfd;
+	}
+}
+
+.card--mark {
+	.card__content {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 6px;
+			height: 6px;
+			background-color: #3cd73a;
+
+			@include min(992px) {
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+}
+
+
+@include min(992px) {
+	.card {
+		font-size: 18px;
+		line-height: 24px;
+
+		&::before, &::after {
+			top: $gridIndent / 2;
+			left: $gridIndent / 2;
+		}
+
+		&__content {
+			padding: 28px 16px 28px 24px;
+			border-width: 4px;
+		}
+
+		&__list {
+			font-size: 20px;
+			line-height: 27px;
+		}
+
+		&__highlight-title {
+			font-size: 26px;
+			line-height: 27px;
+			margin-bottom: 8px;
+		}
+
+		&__link {
+			line-height: 18px;
+		}
+	}
+}
+
+@include min(1200px) {
+	.card {
+		&::before, &::after {
+			top: 20px;
+			left: 20px;
+		}
+	}
+}

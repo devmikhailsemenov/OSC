@@ -1,0 +1,60 @@
+mixin Services()
+	-
+		const firstList = [
+			'разработка лендингов',
+			'разработка мобильных версий',
+			'разработка web-сервисов, порталов, интернет-магазинов',
+			'разработка сайтов на Битрикс и UMI.CMS'
+		]
+
+	-
+		const secondList = [
+			'перенос сайтов с других CMS',
+			'интеграция с вашей CRM-системой',
+			'интеграция с сервисами рассылок',
+			'подключение платежных систем',
+			'расширение функциональности сайтов'
+		]
+
+	section.services.queue-animate-container.wow(id='services-animate-wrap')
+		.container
+			.services__title-wrap
+				+NumberedLines('numbered-lines-title')
+					h1(class=`numbered-lines__descr services__title section-title wow`)
+						pre.pre-text.
+							#[span.section-title__selected-words #[span Сделаем]] то,
+							что нужно
+			.services__for-you-wrap
+				+NumberedLines('numbered-lines-title')
+					.services__for-you
+						+Card('queue-animate-container__item').card--dotted(id='services-animate-2')
+							.numbered-lines__descr for_you.bat
+						span.queue-animate-container__item.dotted-line.dotted-line--1.dotted-line--horizontal(id='services-animate-1')
+						span.queue-animate-container__item.dotted-line.dotted-line--2(id='services-animate-3')
+						.services__lines-group
+							span.queue-animate-container__item.dotted-line.dotted-line--3(id='services-animate-4')
+							span.queue-animate-container__item.dotted-line.dotted-line--4.dotted-line--horizontal(id='services-animate-5')
+							span.queue-animate-container__item.dotted-line.dotted-line--5(id='services-animate-6')
+
+			.section-content
+				.services__inner
+					.services__col.services__col--first
+						+Card('queue-animate-container__item').services__card.card--blue.card--mark(id='services-animate-7')
+							.services__list-wrap
+								ul.card__list
+									each item, i in firstList
+										li.card__item!= item
+
+					.services__col
+						+Card('queue-animate-container__item').services__card.card--blue.card--mark(id='services-animate-8')
+							.services__list-wrap
+								ul.services__list-first.card__list
+									each item, i in firstList
+										li.card__item!= item
+								ul.card__list
+									each item, i in secondList
+										li.card__item!= item
+
+							.services__etc etc
+
+

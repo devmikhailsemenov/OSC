@@ -1,0 +1,18 @@
+.btn-to-top {
+	display: none;
+	@include min(992px) {
+		position: fixed;
+		left: 50px;
+		bottom: 50px;
+		width: 48px;
+		height: 48px;
+		z-index: 90;
+		background: #b100ff url('../img/icon-top.svg') no-repeat center/25px;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&--show {
+			display: inline-block;
+		}
+	}
+}

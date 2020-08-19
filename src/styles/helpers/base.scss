@@ -1,0 +1,210 @@
+:root {
+  --label-width: auto;
+}
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+p {
+	line-height: 20px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+pre {
+	font-family: 'AnonymousPro', sans-serif;
+	margin: 0;
+	font-size: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+textarea {
+	resize: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'AnonymousPro', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #000;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	@include min(992px) {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.body_hidden {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.body_fix-bg {
+	&::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 9;
+		background: url('../img/bg_ds.svg');
+		opacity: .7;
+	}
+}
+
+.box-hidden {
+	display: none;
+
+	@include min(992px) {
+		display: none;
+	}
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+.animate-line-text {
+	font-size: 14px;
+	line-height: 21px;
+	white-space: normal;
+
+	@include min(992px) {
+		font-size: 20px;
+		line-height: 27px;
+		white-space: pre;
+	}
+}
+
+.content-link {
+	color: #222bfd;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-color .2s ease-in;
+	font-weight: 700;
+
+	&::after {
+		content: url('../img/socket-icon.svg');
+		margin-left: 5px;
+	}
+
+	&:hover {
+		border-color: #222bfd;
+	}
+
+	&--text-only {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.green-text {
+	color: #3cd73a;
+
+	&--bold {
+		font-weight: 700;
+	}
+}
+
+.content-highlight {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 700;
+
+	@include min(992px) {
+		font-size: 26px;
+		line-height: 26px;
+	}
+
+	span {
+		display: inline;
+		color: #fff;
+		background-color: #3cd73a;
+		padding: 0 1px;
+	}
+}
+
+.dotted-line {
+	position: absolute;
+	width: 2px;
+	height: auto;
+	background-image: linear-gradient(to top, #000, #000 50%, transparent 50%, transparent 100%);
+	background-size: 2px 7px;
+	opacity: .1;
+	z-index: -2;
+
+	&--horizontal {
+		width: auto;
+		height: 2px;
+		background-image: linear-gradient(to left, #000, #000 50%, transparent 50%, transparent 100%);
+		background-size: 7px 2px;
+	}
+
+	&--sm-none {
+		@include minmax(0px, 767px) {
+			display: none;
+		}
+	}
+
+	&--md-none {
+		@include min(768px) {
+			display: none;
+		}
+	}
+
+	&--xl-min-none {
+		@include min(992px) {
+			display: none;
+		}
+	}
+
+	&--xl-none {
+		@include min(1200px) {
+			display: none;
+		}
+	}
+
+	@include min(992px) {
+		width: 4px;
+		background-size: 4px 10px;
+
+		&--horizontal {
+			height: 4px;
+			background-size: 10px 4px;
+		}
+	}
+}
+
+.swiper-slide {
+	height: auto;
+}

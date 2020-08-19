@@ -1,0 +1,64 @@
+mixin AboutTech()
+	-
+		const backList = [
+			'разработка на Битрикс и UMI.CMS',
+			'проектирование архитектуры',
+			'работа с высокими нагрузками',
+			'аудит кода и архитектуры',
+			'рефакторинг',
+			'интеграция со сторонними сервисами и решениями'
+		]
+
+	-
+		const frontList = [
+			'кроссбраузерная верстка',
+			'адаптивная верстка',
+			'фронтенд и сложный JS',
+			'аудит чужого кода',
+			'ручное и автоматизированное тестирование фронтенда'
+		]
+
+	-
+		const auditList = [
+			'выявление ошибок в коде',
+			'анализ серверной части'
+		]
+
+	section.about-tech
+		.about-tech__container.container
+			+ComputerIcon('about-tech__computer-icon')
+			.about-tech__title-wrap
+				+NumberedLines('numbered-lines-title')
+					h2(class=`numbered-lines__descr section-title wow`)
+						pre.pre-text.
+							Можем, <span class='section-title__selected-words'><span>умеем,
+							практикуем</span></span>
+			.section-content
+				.about-tech__row.section-row
+					.about-tech__col.section-col
+						+Card('about-tech__card about-tech__card--backend').card--blue
+							.about-tech__card-info
+								h3.about-tech__card-title.content-highlight #[span Backend]
+								ul.about-tech__list.card__list
+									each item, i in backList
+										li.card__item!= item
+								.about-tech__skills PHP5/7, JavaScript, #[br] Bitrix, MySQL
+							.about-tech__bottom
+								span pack_back_o(>ω<)o.pkg
+								img.about-tech__face-icon(src='img/face-icon.svg' alt='Иконка с лицом')
+
+
+					.about-tech__col.section-col
+						+Card('about-tech__card about-tech__card--right')
+							.about-tech__card-info
+								h3.about-tech__card-title.content-highlight #[span Frontend]
+								ul.about-tech__list.card__list
+									each item, i in frontList
+										li.card__item!= item
+								.about-tech__skills HTML5, CSS3, Jade, JS #[br] Webpack, Gulp, LESS, SASS
+
+							.about-tech__card-info.about-tech__card-info--last
+								h3.about-tech__card-title.content-highlight #[span Технический аудит]
+								ul.about-tech__list.card__list
+									each item, i in auditList
+										li.card__item!= item

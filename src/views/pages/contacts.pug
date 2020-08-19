@@ -1,0 +1,36 @@
+extends ../layouts/default
+
+block meta
+	title Контакты
+
+block content
+	+MainScreen({ home: false })
+		block mainScreenTitle
+			h1(class=`numbered-lines__descr main-screen__title section-title wow`)
+				pre.section-title__typing.pre-text(id='typed-title-1').
+					#[span.section-title__selected-words #[span Контакты]]
+
+		block mainScreenDescription
+			pre.numbered-lines__descr.animate-line-text.animate-line-text--hide.wow.
+				&lt;--любим, когда нам пишут #[a(href='mailto:info@os-company.ru').content-link.content-link--text-only info@os-company.ru]
+				Но если хотите зайти в гости, то найти в офисе
+				нас можно с понедельника по пятницу #[span.green-text.green-text--bold с 10:00 до 19:00]--&gt;
+
+	+Contacts()
+	+Apply()
+		block title
+			h2(class=`numbered-lines__descr section-title wow`)
+				pre.pre-text.
+					#[span.section-title__selected-words #[span Обращайтесь,]]
+					решим задачу
+		block form
+			+MainForm({
+				arrayFields: [
+					{ required: true, name: 'name', label: 'введите имя', id: 'name-user' },
+					{ required: true, name: 'phone', label: 'введите телефон', id: 'phone-user' },
+					{ required: true, name: 'email', label: 'введите email', id: 'email-user' },
+					{ name: 'message', label: 'расскажите о своем проекте', id: 'message-user', textarea: true }
+				],
+				filesBlockID: 'apply-files-block',
+				className: 'apply__main-form'
+			})

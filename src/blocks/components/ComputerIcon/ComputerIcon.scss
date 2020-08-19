@@ -1,0 +1,29 @@
+.computer-icon__eye {
+	animation: eyeAnimate 2s infinite linear;
+}
+
+@keyframes eyeAnimate {
+	25% {
+		y: 37px;
+		width: 6px;
+		height: 12px;
+	}
+
+	50% {
+		y: 43px;
+		width: 14px;
+		height: 6px;
+	}
+
+	75% {
+		y: 43px;
+		width: 14px;
+		height: 6px;
+	}
+
+	100% {
+		y: 37px;
+		width: 6px;
+		height: 12px;
+	}
+}

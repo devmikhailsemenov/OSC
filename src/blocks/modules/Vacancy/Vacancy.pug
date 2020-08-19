@@ -1,0 +1,32 @@
+mixin Vacancy()
+	section.vacancy
+		.container
+			.vacancy__item
+				.vacancy__city-wrap
+					+NumberedLines('numbered-lines-title')
+						+Card('vacancy__city').card--dotted.wow.animate__animated.animate__fadeInUp
+							.numbered-lines__descr Москва
+
+				.vacancy__section-content.section-content
+					+Card('vacancy__job-card').card--blue.wow.animate__animated.animate__fadeInUp
+						.vacancy__job-name #[span Менеджер по продажам]
+						p.vacancy__descr.
+							/разыскивается толковый менеджер по продажам для обработки входящего потока лидов. Обеспечим заявками и интересными клиентами!
+						.vacancy__link-wrap
+							a.card__next-link(href='/vacancy-manager.html')
+
+			.vacancy__item
+				.vacancy__city-wrap
+					+NumberedLines('numbered-lines-title')
+						+Card('vacancy__city').card--dotted.wow.animate__animated.animate__fadeInUp
+							.numbered-lines__descr Уфа
+
+				.vacancy__section-content.section-content
+					+Card('vacancy__job-card').card--blue.wow.animate__animated.animate__fadeInUp
+						.vacancy__job-name #[span Разработчик на 1C-Битрикс]
+						p.vacancy__descr.
+							/ищем хорошего разработчика на 1С-Битрикс. Обязателен опыт работы с БУС и желателен с Б24, а также наличие выполненных проектов
+						.vacancy__link-wrap
+							a.card__next-link(href='/vacancy-developer-bitrix.html')
+
+

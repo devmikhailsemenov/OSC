@@ -1,0 +1,133 @@
+.header {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	border: 3px solid transparent;
+	background-color: #fff;
+
+	&--active {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border: 3px solid #222bfd;
+		padding-bottom: 40px;
+		overflow: hidden;
+		z-index: 10;
+
+		.header__navbar-wrap {
+			display: block;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+
+	&__order-project {
+		display: none;
+	}
+
+	&__logo-wrap {
+		margin-right: 24px;
+	}
+
+	&__logo-img {
+		flex: 0 0 24px;
+		width: 24px;
+		margin-right: 6px;
+	}
+
+	&__logo-wrap {
+		display: flex;
+		align-items: center;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 12px;
+		color: #000;
+		text-decoration: none;
+	}
+
+	&__company-name {
+		font-size: 14px;
+	}
+
+	&__btn-menu-open-wrap {
+		margin-right: 0;
+		margin-left: auto;
+		flex: 0 0 auto;
+	}
+
+	&__navbar-wrap {
+		display: none;
+		max-width: 100%;
+		flex: 0 0 100%;
+		margin-top: 40px;
+	}
+
+	&__order-project-mob {
+		width: 100%;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	&__order-project-btn-mob {
+		max-width: 250px;
+		width: 100%;
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+}
+
+@include min(992px) {
+	.header {
+
+		&__inner {
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		&__navbar-wrap {
+			display: block;
+		}
+
+		&__logo-img {
+			margin-right: 11px;
+		}
+
+		&__company-name {
+			font-size: 16px;
+			br {
+				display: none;
+			}
+		}
+
+		&__order-project {
+			display: block;
+		}
+
+		&__btn-menu-open-wrap {
+			display: none;
+		}
+
+		&__navbar-wrap {
+			max-width: 400px;
+			margin-top: 0;
+		}
+
+		&__order-project-mob {
+			display: none;
+		}
+	}
+}
+
+@include min(1200px) {
+	.header {
+		padding-top: 80px;
+	}
+}

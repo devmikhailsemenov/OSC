@@ -1,0 +1,133 @@
+.completed-project {
+	padding-bottom: 70px;
+
+	&__row {
+		padding-bottom: 10px;
+	}
+
+	&__col {
+		padding-right: 30px;
+		padding-left: 0;
+		flex: 0 0 268px;
+
+		&:last-child {
+			padding-right: 26px;
+		}
+	}
+
+	&__list {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        &::before {
+            content: '/';
+        }
+    }
+
+	&__card {
+		font-size: 18px;
+		margin-bottom: 30px;
+
+		.card__content {
+			padding-top: 17px;
+			padding-bottom: 15px;
+		}
+
+		.card__list {
+			font-size: 18px;
+			line-height: 21px;
+		}
+	}
+
+	&__stage {
+		@include mb(22px);
+	}
+
+	&__stage-title {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	&__project-name {
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		margin-bottom: 8px;
+	}
+}
+
+@include min(768px) {
+	.completed-project {
+		&__row {
+			overflow: visible;
+			padding: 0;
+			justify-content: space-between;
+		}
+
+		&__col {
+			padding-left: 16px;
+			padding-right: 16px;
+			max-width: 383px;
+			flex: 0 0 auto;
+		}
+	}
+}
+
+@include min(992px) {
+	.completed-project {
+		padding-bottom: 156px;
+
+		&__section-content {
+			padding-right: 76px;
+		}
+
+		&__project-name {
+			font-size: 26px;
+			line-height: 29px;
+			margin-bottom: 16px;
+		}
+
+		&__list {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 32px;
+		}
+
+		&__card {
+			margin-bottom: 44px;
+			.card__content {
+				padding-top: 24px;
+				padding-bottom: 24px;
+			}
+
+			.card__list {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+
+		&__stage-title {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		&__link-project {
+			font-size: 18px;
+			line-height: 29px;
+		}
+	}
+}
+
+
+@include min(1200px) {
+	.completed-project {
+		&__col {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}

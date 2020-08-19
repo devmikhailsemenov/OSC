@@ -1,0 +1,38 @@
+.animate-line-text {
+	overflow: visible;
+	white-space: normal;
+	opacity: 1;
+
+	&__line {
+		display: block;
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.box-hidden {
+	display: none;
+}
+
+.animate-line-text__line--active {
+	transition-property: opacity, transform;
+	transition-duration: .6s;
+}
+
+.box-hidden.animate-line-text__line--active {
+	display: block;
+	opacity: 0;
+	transform: translateX(100px);
+}
+
+pre {
+	margin: 0;
+}
+
+@include min(992px) {
+	.animate-line-text {
+		white-space: pre;
+		opacity: 1;
+		visibility: hidden;
+	}
+}

@@ -1,0 +1,47 @@
+.detail-next-link {
+	position: relative;
+	height: 22px;
+	line-height: 22px;
+	white-space: nowrap;
+	padding-left: 8px;
+	padding-right: 26px;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid #ccdcec;
+	border-radius: 4px;
+	background-color: #fff;
+	color: #242D43;
+	box-sizing: content-box;
+	display: none;
+
+	&--black {
+		background: #141A29;
+		border: 1px solid #2570E7;
+		color: #fff;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		transform: translateY(-50%);
+		background: url('../img/icons/arrow_next.svg') center/cover no-repeat;
+		width: 9px;
+		height: 8px;
+		transition: transform .2s ease-in;
+	}
+
+	&:hover {
+		&::after {
+			transform: translate(3px, -50%);
+		}
+	}
+
+}
+
+@include min-992 {
+	.detail-next-link {
+		display: inline-block;
+	}
+}

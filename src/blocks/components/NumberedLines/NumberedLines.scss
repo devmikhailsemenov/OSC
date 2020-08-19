@@ -1,0 +1,63 @@
+.numbered-lines {
+	display: flex;
+	align-items: flex-start;
+
+	&__numbers {
+		color: #ccc;
+		font-weight: 700;
+		line-height: 46px;
+		margin-right: 9px;
+		padding-top: 2px;
+
+		@include min(992px) {
+			margin-right: 30px;
+		}
+	}
+}
+
+.numbered-lines-input {
+	.numbered-lines__numbers {
+		font-size: 10px;
+		line-height: 10px;
+		flex: 0 0 11px;
+		width: 11px;
+		color: #000;
+
+		@include min(992px) {
+			font-size: 20px;
+			line-height: 61px;
+			flex: 0 0 30px;
+			width: 30px;
+			margin-right: 25px;
+		}
+	}
+}
+
+.numbered-lines-title {
+	.numbered-lines__numbers {
+		font-size: 18px;
+		line-height: 46px;
+		flex: 0 0 20px;
+		width: 20px;
+
+		@include min(992px) {
+			font-size: 40px;
+			line-height: 85px;
+			flex: 0 0 40px;
+			width: 40px;
+		}
+	}
+}
+
+.numbered-lines-animate-text {
+	.numbered-lines__numbers {
+		font-size: 12px;
+		line-height: 21px;
+
+		@include min(992px) {
+			font-size: 20px;
+			line-height: 27px;
+		}
+	}
+
+}

@@ -1,0 +1,16 @@
+mixin FilesBlock({ id, descr, className })
+	- const classes = className ? `${className} files-block` : `files-block`;
+
+	div(class= classes)
+		.files-block__container.container
+			+NumberedLines('numbered-lines-input')
+				.files-block__content
+					.files-block__label-wrap
+						label.files-block__label.numbered-lines__descr.content-link(for= id)!= descr
+						input.files-block__input(type='file' id= id multiple)
+					ul.files-block__list(data-files-id= id)
+
+
+
+
+

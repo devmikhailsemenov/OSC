@@ -1,0 +1,127 @@
+.apply {
+	padding-top: 104px;
+
+	&__container {
+		position: relative;
+	}
+
+	&__apply-icon {
+		display: none;
+	}
+
+	&__title-wrap {
+		margin-bottom: 60px;
+	}
+
+	&__form-wrap {
+		padding: 20px 0 0;
+		background: url('../img/about-tech.svg');
+	}
+
+	&__form-fields {
+		margin-bottom: 25px;
+	}
+
+	&__field {
+		.field-container {
+			padding-left: 44px;
+		}
+	}
+
+	&__files-block {
+		.files-block__container {
+			padding-left: 44px;
+		}
+	}
+
+
+	&__form-submit-block {
+		background-color: #fff;
+		max-width: 255px;
+		padding: 20px 16px 20px 20px;
+	}
+
+	&__form-submit-btn {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+
+	}
+
+	&__agree-warning {
+		font-weight: 700;
+		font-size: 11px;
+		line-height: 14px;
+		text-align: center;
+
+		a {
+			font-weight: 700;
+			color: #000;
+			transition: color .2s linear;
+
+			@include adaptive-hover {
+				color: #222bfd;
+			}
+		}
+	}
+
+	.main-form__submit-wrap {
+		.container {
+			padding-left: 44px;
+		}
+	}
+}
+
+@include min(992px) {
+	.apply {
+		padding-top: 232px;
+		&__apply-icon {
+			display: block;
+			position: absolute;
+			right: 32px;
+			top: -103px;
+		}
+
+		&__form-wrap {
+			padding: 42px 0 0;
+		}
+
+		&__field {
+			.field-container {
+				padding-left: 140px;
+			}
+		}
+
+		&__files-block {
+			.files-block__container {
+				padding-left: 140px;
+			}
+		}
+
+		&__form-submit-wrap {
+			.container {
+				padding-left: 100px;
+			}
+		}
+
+		&__form-submit-block {
+			max-width: 445px;
+			padding: 32px 44px 32px 95px;
+		}
+
+		&__form-submit-btn {
+			margin-bottom: 16px;
+		}
+
+		&__agree-warning {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		.main-form__submit-wrap {
+			.container {
+				padding-left: 44px;
+			}
+		}
+	}
+}

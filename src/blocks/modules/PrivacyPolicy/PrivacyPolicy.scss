@@ -1,0 +1,51 @@
+.privacy-policy-popup {
+	height: 100%;
+	margin: 0;
+
+	&__content {
+		height: 100%;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__text-info {
+		p {
+			@include mb(24px);
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+}
+
+@include min(992px) {
+	.privacy-policy-popup {
+		text-align: center;
+		height: 600px;
+		padding-left: 121px;
+		padding-right: 21px;
+
+		&__content {
+			padding-right: 92px;
+
+			&::-webkit-scrollbar {
+				display: block;
+				width: 8px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				width: 8px;
+				background: #ccc;
+				border-radius: 4px;
+			}
+		}
+
+		&__text-info {
+			text-align: left;
+		}
+	}
+}

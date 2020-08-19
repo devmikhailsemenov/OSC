@@ -1,0 +1,19 @@
+mixin Navbar({ className })
+	-
+		const navList = [
+			{ value: 'услуги', link: '/' },
+			{ value: 'проекты', link: '/projects.html' },
+			{ value: 'партнёры', link: '/partners.html' },
+			{ value: 'вакансии', link: '/vacancy.html' },
+			{ value: 'контакты', link: '/contacts.html' }
+		]
+
+	nav(class=`${className} navbar`)
+		ul(class='navbar__list')
+			each navItem, i in navList
+				li(class=`navbar__item ${navItem.mixClass ? navItem.mixClass : ''}`)
+					+Btn({
+						children: navItem.value,
+						tag: 'a',
+						className: `navbar__link ${navItem.active ? 'navbar__link--active' : ''}`
+					})(href= navItem.link)

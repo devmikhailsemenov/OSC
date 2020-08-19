@@ -1,0 +1,33 @@
+mixin Header()
+	header.header
+		.container
+			.header__inner
+				.header__left
+					a.header__logo-wrap(href='/')
+						img.header__logo-img(src='img/logo.svg' alt='Логотип')
+						span.header__company-name OSC #[br] Programming
+					.header__order-project
+						+Btn({
+							children: 'заказать проект',
+							typeView: 'blue',
+							className: 'header__order-project-btn'
+						})(data-modal='ordering-project')
+
+				.header__btn-menu-open-wrap
+					+Btn({
+						children: 'меню',
+						className: 'header__btn-menu-open'
+					})
+
+				.header__navbar-wrap
+
+					+Navbar({
+						className: 'header__navbar'
+					})
+
+					.header__order-project-mob
+						+Btn({
+							children: 'заказать проект',
+							typeView: 'blue',
+							className: 'header__order-project-btn-mob'
+						})(data-modal='ordering-project')

@@ -1,0 +1,68 @@
+mixin CompletedProject()
+	section.completed-project
+		.container
+			.completed-project__section-content.section-content
+				.completed-project__row.section-row.section-row--scroll
+					.completed-project__col.section-col
+						.completed-project__project-name Стил-арт
+
+						ul.completed-project__list
+							li.completed-project__item компания, производящая складские системы и стеллажи
+							li.completed-project__item сроки проекта: 11.2017-09.2018
+							li.completed-project__item запущен в 2018 году
+
+
+						+Card('completed-project__card').card--blue.card--mark
+							.completed-project__stage
+								h3.completed-project__stage-title.content-highlight #[span Frontend]
+								ul.card__list
+									li.card__item HTML5 + CSS3 + JS
+									li.card__item 14 дней
+
+							.completed-project__stage
+								h3.completed-project__stage-title.content-highlight #[span Backend]
+								ul.card__list
+									li.card__item BITRIX
+									li.card__item PHP + MYSQL
+									li.card__item 8 дней
+
+							.completed-project__stage
+								h3.completed-project__stage-title.content-highlight #[span Design]
+								ul.card__list
+									li.card__item AIDEM
+									li.card__item 25 дней
+
+						.completed-project__link-project
+							a.content-link(href='stil-art.ru') stil-art.ru
+
+
+					.completed-project__col.section-col
+						.completed-project__project-name UNICORN
+
+						ul.completed-project__list
+							li.completed-project__item компания занималась продажей жидкостей для парения
+							li.completed-project__item сроки проекта: 11.2016-07.2017
+							li.completed-project__item закрыт в 2019 году
+
+						+Card('completed-project__card').card--blue.card--mark
+							.completed-project__stage
+								h3.completed-project__stage-title.content-highlight #[span Frontend]
+								ul.card__list
+									li.card__item HTML5 + CSS3 + JS
+									li.card__item 28 дней
+
+							.completed-project__stage
+								h3.completed-project__stage-title.content-highlight #[span Backend]
+								ul.card__list
+									li.card__item BITRIX
+									li.card__item PHP + MYSQL
+									li.card__item 13 дней
+
+							.completed-project__stage
+								h3.completed-project__stage-title.content-highlight #[span Design]
+								ul.card__list
+									li.card__item AIDEM
+									li.card__item 22 дня
+
+						.completed-project__link-project
+							a.content-link(href='unicornvaper.lmth.ru') unicornvaper.lmth.ru

@@ -1,0 +1,32 @@
+.queue-animate-container__item {
+
+	&.card {
+		transition: opacity .3s linear, transform .3s linear;
+		transform: scale(.7) translate(100px, 100px);
+		opacity: 0;
+
+		&.active {
+			transform: scale(1) translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+
+	&.dotted-line {
+		transition-duration: .3s;
+		transition-timing-function: linear;
+	}
+
+	&.dotted-line--horizontal {
+		transition-property: width;
+		width: 0px;
+	}
+
+	&.dotted-line:not(.dotted-line--horizontal) {
+		transition-property: height;
+		height: 0px;
+	}
+
+	&.active.no-transition {
+		transition: none !important;
+	}
+}

@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+block meta
+	title Наши партнеры
+
+block content
+	+MainScreen({ home: false })
+		block mainScreenTitle
+			h1(class=`numbered-lines__descr main-screen__title section-title wow`)
+				pre.section-title__typing.pre-text(id='typed-title-1').
+					#[span.section-title__selected-words #[span Партнёры]]
+
+		block mainScreenDescription
+			pre.numbered-lines__descr.animate-line-text.animate-line-text--hide.wow.
+				&lt;--работаем с крупнейшими российскими агентствами,
+				помогаем с версткой и разработкой--&gt;
+	+Partners()

@@ -1,0 +1,148 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	display: block;
+	text-align: center;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	white-space: nowrap;
+	transition-timing-function: ease-out;
+
+	&__content {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: auto;
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 0;
+		}
+	}
+}
+
+.overlay-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg_ds.svg');
+	opacity: .8;
+}
+
+.popup {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+	padding: 53px 32px 57px 32px;
+	width: 100%;
+	margin: 20px 0;
+	background: #fff;
+	border: 3px solid #222bfd;
+	font-size: initial;
+	text-align: left;
+	opacity: 1;
+	transform: scale(1);
+	pointer-events: auto;
+	transition-timing-function: ease-out;
+
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+
+	&__description {
+		margin-bottom: 20px;
+	}
+
+	&__btn-wrap {
+		.btn {
+			width: 100%;
+		}
+
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		display: block;
+		width: 16px;
+		height: 16px;
+		cursor: pointer;
+
+		svg {
+			display: inline-block;
+			vertical-align: bottom;
+			width: 100%;
+			height: 100%;
+		}
+
+		path {
+			transition: fill .2s linear;
+		}
+
+		&:hover {
+			path {
+				fill: #222bfd;
+			}
+		}
+	}
+}
+
+.box-hidden {
+	display: none;
+}
+
+.popup_enter-to, .popup_leave-to {
+	transition-property: opacity, transform;
+	transition-duration: .3s;
+}
+
+.box-hidden.popup_enter-to {
+	display: inline-block;
+	transform: scale(.5);
+	opacity: 0;
+}
+
+.box-hidden.popup_leave-to {
+	display: inline-block;
+	transform: scale(1.5);
+	opacity: 0;
+}
+
+@include min(992px) {
+	.popup {
+		max-width: 920px;
+		text-align: center;
+		padding: 66px 32px 79px 32px;
+
+		&__title {
+			font-size: 32px;
+			line-height: 32px;
+			margin-bottom: 28px;
+		}
+
+		&__btn-wrap {
+			.btn {
+				max-width: 306px;
+			}
+		}
+	}
+}

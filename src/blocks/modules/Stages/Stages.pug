@@ -1,0 +1,38 @@
+mixin Stages()
+	-
+		const stages = [
+			{title: 'Дизайн', companyName: 'Aidem', text: '/входит в топ-5 digital-дизайн студий Санкт-Петербурга', link: {href: 'https://www.aidem.ru/', path: 'aidem.ru'}},
+			{title: 'Разработка на Битрикс', companyName: 'OSC Programming', text: '/верстка, программирование, интеграция', link: {href: '/', path: 'вы здесь'}},
+			{title: 'Техподдержка', companyName: 'Технокод', text: '/служба поддержки сайтов на Битрикс и UMI.CMS', link: {href: 'https://s-4-b.ru/', path: 's-4-b.ru'}},
+			{title: 'Маркетинг', companyName: 'Lead Zeppelin', text: '/маркетинговое агентство', link: {href: 'https://leadzeppelin.ru/', path: 'leadzeppelin.ru'}},
+			{title: 'Продвижение', companyName: 'GARIN STUDIO', text: '/продвижение в социальных медиа', link: {href: 'http://garin-studio.ru/', path: 'garin-studio.ru'}},
+			{title: 'Автоматизация', companyName: 'CRM24.TEAM', text: '/автоматизация бизнес-процессов', link: {href: 'https://crm24.team/', path: 'crm24.team'}}
+		]
+
+	section.stages
+		.container
+			.stages__title-wrap
+				+NumberedLines('numbered-lines-title')
+					h2(class=`numbered-lines__descr section-title wow`)
+						pre.pre-text.
+							#[span.section-title__selected-words #[span Поможем]]
+							на любой стадии
+
+			.stages__description
+				+NumberedLines('numbered-lines-animate-text')
+					block descriptionStages
+
+			.section-content
+				.stages__row.section-row.section-row--scroll
+					each stage, i in stages
+						- const { title, companyName, text, link } = stage
+
+						.stages__col
+							.stages__item
+								h3.stages__item-title.content-highlight
+									span= title
+								+Card('stages__card').card--green
+									.stages__company-name= companyName
+									.stages__item-text= text
+									.stages__item-link-wrap
+										a.content-link(href= link.href)= link.path

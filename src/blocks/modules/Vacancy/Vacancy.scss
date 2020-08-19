@@ -1,0 +1,122 @@
+.vacancy {
+	&__item {
+		@include mb(113px);
+	}
+
+	&__section-content {
+		padding-left: 29px;
+	}
+
+	&__city-wrap {
+		margin-bottom: 30px;
+
+		.numbered-lines__numbers {
+			line-height: 40px;
+		}
+	}
+
+	&__city {
+		font-size: 18px;
+		line-height: 18px;
+		color: #222BFD;
+		visibility: hidden;
+		.card__content {
+			padding: 8px 17px;
+		}
+	}
+
+	&__link-wrap {
+		text-align: right;
+	}
+
+	&__job-name {
+		font-size: 18px;
+		line-height: 21px;
+		color: #fff;
+		margin-bottom: 7px;
+
+		span {
+			background-color: #222bfd;
+		}
+	}
+
+	&__job-card {
+		visibility: hidden;
+		.card__content {
+			padding: 17px;
+		}
+	}
+}
+
+.vacancy-one {
+	&__item-title {
+		margin-bottom: 8px;
+	}
+
+	&__descr-item {
+		@include mb(40px);
+	}
+}
+
+@include min(992px) {
+	.vacancy {
+		&__item {
+			@include mb(140px);
+		}
+
+		&__city-wrap {
+			margin-bottom: 60px;
+		}
+
+		&__city {
+			font-size: 26px;
+			line-height: 27px;
+			color: #222BFD;
+			.card__content {
+				padding: 24px 28px;
+			}
+		}
+
+		&__job-card {
+			.card__content {
+				padding: 34px 28px 26px 28px;
+			}
+		}
+
+		&__job-name {
+			font-size: 32px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+
+		&__descr {
+			line-height: 24px;
+		}
+
+		&__section-content {
+			padding-left: 70px;
+			max-width: 810px;
+		}
+	}
+
+	.vacancy-one {
+		&__item-title {
+			margin-bottom: 15px;
+		}
+
+		&__list {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		&__item {
+			&::before {
+				content: '/'
+			}
+		}
+
+		&__descr-item {
+			@include mb(60px);
+		}
+	}
+}

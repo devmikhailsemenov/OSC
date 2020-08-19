@@ -1,0 +1,6 @@
+mixin Card(className)
+	- const classes = className ? `${className} card` : 'card';
+
+	div(class= classes)&attributes(attributes)
+		.card__content
+			block

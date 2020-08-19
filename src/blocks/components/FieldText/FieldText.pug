@@ -1,0 +1,54 @@
+mixin FieldText({ className, required, name, label, textarea, id, number, errorText, successText })
+
+	- const requiredInput = (required) ? 'field-wrap__input--req' : '';
+	- const textAreaMixClass = textarea ? `field-wrap field-wrap--textarea` : `field-wrap`;
+	- const classes = className ? `${className} ${textAreaMixClass}` : `${textAreaMixClass}`;
+
+	- const static = number ? true : false;
+
+	mixin TemplateInput()
+		if textarea
+			if errorText && successText
+				textarea(
+					name= name
+					class=`field-wrap__input ${ requiredInput }`
+					id= id
+					data-error= errorText
+					data-success= successText
+				)
+			else
+				textarea(
+					name= name
+					class=`field-wrap__input ${ requiredInput }`
+					id= id
+				)
+
+		else
+			if errorText && successText
+				input(
+					type='text'
+					name= name
+					class=`field-wrap__input ${requiredInput}`
+					id= id
+					autocomplete='off'
+					data-error= errorText
+					data-success= successText
+				)
+			else
+				input(
+					type='text'
+					name= name
+					class=`field-wrap__input ${requiredInput}`
+					id= id
+					autocomplete='off'
+				)
+
+	div(class= classes)&attributes(attributes)
+		.field-container.container
+			+NumberedLines('numbered-lines-input', [number], static)
+				.field-wrap__content
+					.field-wrap__label-wrap
+						label(class=`numbered-lines__descr field-wrap__label` for= id).
+							&lt;#[span(data-default-label= label)= label]&gt;
+					+TemplateInput()
+					span.field-wrap__text-error

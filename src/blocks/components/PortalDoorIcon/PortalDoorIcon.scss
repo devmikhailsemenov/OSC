@@ -1,0 +1,29 @@
+.portal-door-icon {
+	display: block;
+	width: 61px;
+	height: 104px;
+	margin: auto;
+}
+
+.portal-door-icon__door {
+	transform-origin: 100% 100%;
+	animation: doorAnimate 3s infinite ease-in;
+}
+
+@keyframes doorAnimate {
+	25% {
+		transform: translateX(0px);
+	}
+
+	50% {
+		transform: translateX(10px) skew(0, 20deg);
+	}
+
+	75% {
+		transform: translateX(10px) skew(0, 20deg);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}

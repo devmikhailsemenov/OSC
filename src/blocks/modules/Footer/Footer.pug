@@ -1,0 +1,51 @@
+mixin Footer()
+	footer.footer
+		.container
+			.footer__row
+				.footer__contacts
+					ul.footer__contacts-list
+						li.footer__contacts-item
+							a.footer__contacts-link(href='tel:+78127151767') +7 (812) 715-17-67
+						li.footer__contacts-item
+							a.footer__contacts-link(href='tel:+74952583123') +7 (495) 258-31-23
+						li.footer__contacts-item
+							a.footer__contacts-link(href='mailto:info@os-company.ru') info@os-company.ru
+					ul.footer__social-list
+						li.footer__social-item
+							+Btn({
+								children: 'вконтакте',
+								tag: 'a',
+								className: 'footer__social-link'
+							})(href='https://vk.com/gk.sneg' target='_blank')
+						li.footer__social-item
+							+Btn({
+								children: 'facebook',
+								tag: 'a',
+								className: 'footer__social-link'
+							})(href='https://www.facebook.com/gk.sneg/' target='_blank')
+						li.footer__social-item
+							+Btn({
+								children: 'Instagram',
+								tag: 'a',
+								className: 'footer__social-link'
+							})(href='https://instagram.com/gk.sneg' target='_blank')
+						li.footer__social-item
+							+Btn({
+								children: 'gk–sneg.com',
+								tag: 'a',
+								className: 'footer__social-link'
+							})(href='https://gk-sneg.com/' target='_blank')
+
+				.footer__portal
+					+Card('footer__portal-card').card--blue.card--mark
+						.footer__portal-entry
+							.footer__portal-text Вход<br>в портал...
+							.footer__portal-entry-link
+								+Btn({
+									children: 'войти',
+									tag: 'a',
+									className: 'footer__portal-link'
+								})(href='https://os-c.ru/' target='_blank')
+
+						.footer__portal-door
+							+PortalDoorIcon()

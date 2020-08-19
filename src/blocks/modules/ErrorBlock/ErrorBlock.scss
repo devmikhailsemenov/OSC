@@ -1,0 +1,95 @@
+.error-block {
+	background-color: #fece45;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 60px 30px;
+	font-weight: 700;
+	min-height: 500px;
+
+	&__content {
+		text-align: center;
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 80px;
+		line-height: 80px;
+		margin-bottom: 38px;
+
+		span {
+			background-color: #222bfd;
+			padding: 0 5px;
+		}
+	}
+
+	&__main-text {
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 450px;
+	}
+
+	&__small-text {
+		margin-bottom: 20px;
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__good-browsers {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__good-browsers-link {
+		display: block;
+		color: #000;
+		font-weight: 700;
+		@include mr(20px);
+
+		img {
+			display: block;
+			width: 70px;
+			height: 70px;
+			margin: 0 auto 15px auto;
+		}
+	}
+}
+
+@include min(992px) {
+	.error-block {
+		min-height: 700px;
+		&__title {
+			font-size: 150px;
+			line-height: 150px;
+			margin-bottom: 60px;
+		}
+
+		&__main-text {
+			max-width: 700px;
+			font-size: 40px;
+			line-height: 46px;
+			margin-bottom: 40px;
+		}
+
+		&__small-text {
+			max-width: 700px;
+			font-size: 20px;
+			line-height: 20px;
+			margin-bottom: 64px;
+		}
+
+		&__good-browsers {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__good-browsers-link {
+			@include mr(50px);
+		}
+	}
+}

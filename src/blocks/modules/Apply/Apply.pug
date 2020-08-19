@@ -1,0 +1,10 @@
+mixin Apply()
+	section.apply
+		.apply__title-wrap
+			.apply__container.container
+				+ApplyIcon('apply__apply-icon')
+				+NumberedLines('numbered-lines-title')
+					block title
+
+		.apply__form-wrap
+			block form

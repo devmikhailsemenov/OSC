@@ -1,0 +1,173 @@
+.footer {
+	padding: 100px 0 30px;
+
+	&__contacts {
+		margin-bottom: 40px;
+	}
+
+	&__contacts-list {
+		margin-bottom: 40px;
+	}
+
+	&__contacts-item {
+		@include mb(20px);
+	}
+
+	&__contacts-link {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 16px;
+		color: #000;
+		transition: color .2s linear;
+
+		@include adaptive-hover {
+			color: #222bfd;
+		}
+	}
+
+	&__social-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -6px -20px;
+	}
+
+	&__social-item {
+		flex: 0 0 50%;
+		padding: 0 6px;
+		margin-bottom: 20px;
+	}
+
+	&__social-link {
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
+	}
+
+	&__portal-card {
+		max-width: 288px;
+		width: 100%;
+
+		.card__content {
+			padding-right: 33px;
+		}
+	}
+
+	&__portal-text {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+		margin-bottom: 14px;
+	}
+
+	&__portal-door {
+		position: absolute;
+		right: 33px;
+		bottom: 0;
+		overflow: hidden;
+		width: 57px;
+		height: 104px;
+		background: url('../img/portal-bckg.svg') center no-repeat;
+	}
+
+	&__portal-link {
+		transition: all .2s linear;
+
+		@include adaptive-hover {
+			color: #222bfd;
+			border-color: #222bfd;
+		}
+	}
+}
+
+@include min(768px) {
+	.footer {
+		&__contacts-list {
+			display: flex;
+			margin-bottom: 24px;
+		}
+
+		&__contacts-item {
+			@include mr(34px);
+			margin-bottom: 0;
+		}
+
+		&__social-list {
+			margin-left: -12.5px;
+			margin-right: -12.5px;
+		}
+
+		&__social-item {
+			max-width: 25%;
+			flex: 0 0 25%;
+			padding: 0 12.5px;
+		}
+	}
+}
+
+@include min(992px) {
+	.footer {
+		&__row {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			padding-right: 20px;
+		}
+
+		&__contacts {
+			margin-bottom: 0;
+		}
+
+		&__contacts-link {
+			font-size: 16px;
+		}
+
+		&__social-item {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		&__portal {
+			max-width: 288px;
+			width: 100%;
+		}
+
+		&__portal-card {
+
+			.card__content {
+				padding-right: 23px;
+				padding-left: 18px;
+			}
+		}
+
+		&__portal-text {
+			margin-bottom: 21px;
+			font-size: 26px;
+			line-height: 27px;
+		}
+
+		&__portal-door {
+			right: 23px;
+			width: 61px;
+		}
+
+		&__portal-link {
+			font-size: 20px;
+		}
+	}
+}
+
+@include min(1200px) {
+	.footer {
+		padding: 200px 0 60px;
+
+		&__contacts {
+			max-width: 638px;
+			width: 100%;
+		}
+
+		&__social-item {
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+	}
+}

@@ -1,0 +1,92 @@
+extends ../layouts/default
+
+block meta
+	title Разработчик на 1C-Битрикс
+
+block content
+	+MainScreen({ home: false })
+		block mainScreenTitle
+			h1(class=`numbered-lines__descr main-screen__title section-title wow`)
+				pre.section-title__typing.pre-text(id='typed-title-1').
+					#[span.section-title__selected-words #[span Разработчик ]]
+					на 1C-Битрикс
+
+		block mainScreenDescription
+			pre.numbered-lines__descr.animate-line-text.animate-line-text--hide.wow.
+				&lt;--город Уфа--&gt;
+
+	section.vacancy-one
+		.container
+			.section-content
+				.vacancy-one__descr-item
+					h3.vacancy-one__item-title.content-highlight #[span Что нужно будет делать]
+					ul.vacancy-one__list
+						li.vacancy-one__item работа с системой 1С-Битрикс, а именно сборка и программирование проектов
+						li.vacancy-one__item разработка сложного и нестандартного функционала на базе Bitrix Framework
+						li.vacancy-one__item соблюдение code review компании, работа в команде
+						li.vacancy-one__item работа с системой контроля версий
+						li.vacancy-one__item использование task-трекера (внедрен Битрикс24 в коробке)
+
+				.vacancy-one__descr-item
+					h3.vacancy-one__item-title.content-highlight #[span Здорово, если у вас есть]
+					ul.vacancy-one__list
+						li.vacancy-one__item уверенные знания PHP-MySQL
+						li.vacancy-one__item знание 1С-Битрикс, наличие сертификатов и сданных экзаменов
+						li.vacancy-one__item базовые знания HTML/CSS и JS на случай внесения правок без привлечения front-end-специалиста
+						li.vacancy-one__item умение разбираться в чужом коде и писать свой так, чтобы его понимали коллеги
+						li.vacancy-one__item наличие в портфолио работ на 1С-Битрикс
+
+				.vacancy-one__descr-item
+					h3.vacancy-one__item-title.content-highlight #[span Условия]
+					ul.vacancy-one__list
+						li.vacancy-one__item заработная плата от 30 000 руб, увеличение оплаты по мере профессионального роста
+						li.vacancy-one__item полный рабочий день
+
+	+Apply()
+		block title
+			h2(class=`numbered-lines__descr section-title wow`)
+				pre.pre-text.
+					#[span.section-title__selected-words #[span Хотите к нам?]]
+					Напишите
+		block form
+			+MainForm({
+				arrayFields: [
+					{
+						required: true,
+						name: 'vacancy',
+						label: 'вакансия',
+						id: 'vacancy-user',
+						errorText: 'укажите вакансию',
+						successText: 'вакансия'
+					},
+					{
+						required: true,
+						name: 'name',
+						label: 'введите имя',
+						id: 'name-user'
+					},
+					{
+						required: true,
+						name: 'phone',
+						label: 'введите телефон',
+						id: 'phone-user'
+					},
+					{
+						required: true,
+						name: 'email',
+						label: 'введите email',
+						id: 'email-user'
+					},
+					{
+						required: true,
+						name: 'message',
+						label: 'расскажите о себе',
+						id: 'message-user',
+						textarea: true,
+						errorText: 'расскажите о себе',
+						successText: 'спасибо, что рассказали о себе!'
+					}
+				],
+				filesBlockID: 'apply-files-block',
+				className: 'apply__main-form'
+			})

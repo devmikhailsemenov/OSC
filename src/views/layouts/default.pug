@@ -1,0 +1,44 @@
+include ../helpers/mixins.pug
+
+block globalVars
+
+doctype html
+
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport' content="width=320, initial-scale=1, shrink-to-fit=no")
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='description' content=pageDescription || '')
+		meta(name='keywords' content=pageKeywords || '')
+
+		link(rel='mask-icon' href='img/favicon/safari-pinned-tab.svg' color='#5bbad5')
+		link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
+		link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon-32x32.png')
+		link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
+		link(rel='icon', type='image/ico', sizes='16x16', href='img/favicon/favicon.ico')
+
+		link(href='styles/main.css' type="text/css" rel='stylesheet')
+
+		block meta
+			title Home
+
+	body
+		block header
+			+Header()
+
+		main.main
+			block content
+				p Контент
+
+		block footer
+			+Footer()
+
+		block page-bottom
+			+Preloader()
+			+BtnToTop()
+			+OrderingProject()
+			+PrivacyPolicy()
+
+			script(src="js/main.js")
+

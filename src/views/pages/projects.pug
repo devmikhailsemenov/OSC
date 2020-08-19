@@ -1,0 +1,38 @@
+extends ../layouts/default
+
+block meta
+	title Проекты
+
+block content
+	+MainScreen({ home: false })
+		block mainScreenTitle
+			h1(class=`numbered-lines__descr main-screen__title section-title wow`)
+				pre.section-title__typing.pre-text(id='typed-title-1').
+					#[span.section-title__selected-words #[span Реализованные]]
+					проекты
+
+		block mainScreenDescription
+			pre.numbered-lines__descr.animate-line-text.animate-line-text--hide.wow.
+				&lt;--работаем по своему code style. Пишем изящный код,
+				находя максимально элегантные и экономичные решения
+				бизнес-задачам--&gt;
+	+CompletedProject()
+	+ProjectAll()
+	+Reviews()
+	+Apply()
+		block title
+			h2(class=`numbered-lines__descr section-title wow`)
+				pre.pre-text.
+					#[span.section-title__selected-words #[span Обращайтесь,]]
+					решим задачу
+		block form
+			+MainForm({
+				arrayFields: [
+					{ required: true, name: 'name', label: 'введите имя', id: 'name-user' },
+					{ required: true, name: 'phone', label: 'введите телефон', id: 'phone-user' },
+					{ required: true, name: 'email', label: 'введите email', id: 'email-user' },
+					{ name: 'message', label: 'расскажите о своем проекте', id: 'message-user', textarea: true }
+				],
+				filesBlockID: 'apply-files-block',
+				className: 'apply__main-form'
+			})

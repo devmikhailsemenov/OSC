@@ -1,0 +1,44 @@
+.contacts {
+	&__item {
+		@include mb(80px);
+	}
+
+	&__img-wrap {
+		display: none;
+	}
+
+	&__item-title {
+		margin-bottom: 12px;
+	}
+
+	&__item-descr {
+		font-weight: 700;
+		&::before {
+			content: '/';
+		}
+	}
+}
+
+@include min(992px) {
+	.contacts {
+		&__item {
+			@include mb(120px);
+		}
+
+		&__img-wrap {
+			display: block;
+			max-width: 916px;
+
+			img {
+				display: inline-block;
+				vertical-align: bottom;
+				max-width: 100%;
+			}
+		}
+
+		&__item-descr {
+			margin-bottom: 40px;
+			max-width: 360px;
+		}
+	}
+}

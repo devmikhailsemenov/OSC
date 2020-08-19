@@ -1,0 +1,26 @@
+extends ../layouts/error-page
+
+block meta
+	title 404
+
+block content
+	.error-block
+		.error-block__content
+			h1.error-block__title #[span 404]
+			p.error-block__main-text.
+				Упс. Что-то пошло не так.
+				Такой страницы больше нет,а&nbsp;может, никогда
+				и не было…
+			p.error-block__small-text.
+				Перейдите на главную и начните
+				свой путь оттуда. Вообще, любой путь стоит начинать с главного.
+				Но это так… Мысли в слух.
+			.error-block__btn-wrap
+				//- +Btn({
+				//- 	children: 'на главную',
+				//- 	typeView: 'blue',
+				//- 	tag: 'a',
+				//- 	className: 'error-block__btn'
+				//- })(href='/')
+
+

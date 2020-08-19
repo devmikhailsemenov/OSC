@@ -1,0 +1,16 @@
+mixin MainScreen({ title, description, home })
+	section(class=`main-screen ${home ? 'main-screen--home-page' : ''}`)
+		.container
+			.main-screen__title-wrap
+				+NumberedLines('numbered-lines-title')
+					block mainScreenTitle
+
+			.main-screen__description
+				+NumberedLines('numbered-lines-animate-text')
+					block mainScreenDescription
+
+			if home
+				.main-screen__mouse
+					img.main-screen__mouse-img(src='img/icons/mouse.svg' alt='mouse')
+
+			block mainScreenContent

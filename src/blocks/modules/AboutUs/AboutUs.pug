@@ -1,0 +1,64 @@
+mixin AboutUs()
+	section.about-us
+		.container
+			.section-content
+				.about-us__description.
+					/«Если проще — открыты проектам любой направленности и сложности»
+				.about-us__main.wow.queue-animate-container(id='about-us-animate-wrap')
+					.about-us__card.about-us__card--main
+						+Card('queue-animate-container__item').card--blue(id='about-us-animate-1')
+							.about-us__main-card-content
+								.about-us__person-descr
+									pre.
+										&lt;a href=
+										«#[span.green-text v_baranov].bmp»&gt;
+										#[span.green-text технический]
+										#[span.green-text директор]&lt;/a&gt;
+								.about-us__person-photo
+									img(src='img/baranov-photo.svg' alt='Василий Баранов')
+
+						span.about-us__line.queue-animate-container__item.dotted-line(id='about-us-animate-2')
+					.about-us__inner.section-row
+						.about-us__col
+							.about-us__card
+								+Card('queue-animate-container__item').card--green.card--dotted(id='about-us-animate-3')
+									.about-us__card-text.
+										/сертифицированные #[br]
+										специалисты БУС и #[a.content-link Битрикс24]
+								span.about-us__line.queue-animate-container__item.dotted-line(id='about-us-animate-4')
+
+							.about-us__card
+								+Card('queue-animate-container__item').card--green.card--dotted(id='about-us-animate-5')
+									.about-us__card-text.
+										/золотые партнеры 1C-Битрикс #[br]
+										/серебряные партнеры #[a.content-link UMI.CMS]
+								span.about-us__line.queue-animate-container__item.dotted-line.dotted-line--md-none(id='about-us-animate-15')
+
+						.about-us__lines-group-xl-center
+							span.queue-animate-container__item.dotted-line.dotted-line--1.dotted-line--horizontal(id='about-us-animate-6')
+							span.queue-animate-container__item.dotted-line.dotted-line--2(id='about-us-animate-7')
+							span.queue-animate-container__item.dotted-line.dotted-line--3.dotted-line--horizontal(id='about-us-animate-8')
+
+
+						.about-us__col
+							.about-us__card
+								+Card('queue-animate-container__item').card--green.card--dotted(id='about-us-animate-9')
+									.about-us__card-text.
+										/обладаем компетенцией #[br]
+										#[a.content-link Композитный сайт]
+								span.about-us__line.queue-animate-container__item.dotted-line.dotted-line--xl-none(id='about-us-animate-18')
+
+							.about-us__card.about-us__card--last
+								+Card('queue-animate-container__item').card--green.card--dotted(id='about-us-animate-13')
+									.about-us__card-text.
+										/участник программы #[br]
+										Качества внедрений
+								.about-us__lines-group.about-us__lines-group--mob
+									span.about-us__line.queue-animate-container__item.dotted-line.dotted-line--1(id='about-us-animate-14')
+									span.about-us__line.queue-animate-container__item.dotted-line.dotted-line--2.dotted-line--horizontal.dotted-line--md-none(id='about-us-animate-16')
+									span.about-us__line.queue-animate-container__item.dotted-line.dotted-line--3.dotted-line--md-none(id='about-us-animate-17')
+
+						.about-us__lines-group-xl-right
+							span.queue-animate-container__item.dotted-line.dotted-line--1.dotted-line--horizontal(id='about-us-animate-10')
+							span.queue-animate-container__item.dotted-line.dotted-line--2(id='about-us-animate-11')
+							span.queue-animate-container__item.dotted-line.dotted-line--3.dotted-line--horizontal(id='about-us-animate-12')

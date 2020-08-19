@@ -1,0 +1,17 @@
+mixin OrderingProject()
+	+Modal({ className: 'ordering-project-popup', id: 'ordering-project' })
+		+NumberedLines('numbered-lines-title')
+			h2(class=`numbered-lines__descr popup__title`)
+				pre.pre-text.
+					#[span.typed-title__first-word #[span Заказать]] проект
+
+		+MainForm({
+			arrayFields: [
+				{ required: true, name: 'name', label: 'введите имя', id: 'name-user-popup' },
+				{ required: true, name: 'phone', label: 'введите телефон', id: 'phone-user-popup' },
+				{ required: true, name: 'email', label: 'введите email', id: 'email-user-popup' },
+				{ name: 'message', label: 'расскажите о своем проекте', id: 'message-user-popup', textarea: true }
+			],
+			filesBlockID: 'apply-files-block-popup',
+			className: 'ordering-project-popup__main-form'
+		})

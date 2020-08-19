@@ -1,0 +1,65 @@
+.apply-icon {
+	&__cloud {
+		transform-origin: 0 100%;
+		transform: scale(0, 0);
+		opacity: 0;
+		animation: cloudAnimate 4s infinite ease-in;
+	}
+
+	&__exc-mark {
+		animation: excAnimate 4s infinite ease-in;
+		opacity: 0;
+	}
+}
+
+@keyframes cloudAnimate {
+	20% {
+		transform: scale(0, 0);
+		opacity: 0;
+	}
+
+	40% {
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+
+	80% {
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(0, 0);
+		opacity: 0;
+	}
+}
+
+@keyframes excAnimate {
+	20% {
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	60% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

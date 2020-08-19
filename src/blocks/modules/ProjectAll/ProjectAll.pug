@@ -1,0 +1,193 @@
+mixin ProjectAll()
+	-
+		const projectList = [
+			{
+				name: 'Dvornikov.Net',
+				type: '#онлайн-сервисы',
+				stagesArr: [['интеграция']],
+				aboutProject: 'Сайт компании по подбору,  продаже и установке комплектующих для автомобилей',
+				href: 'https://dvornikov.net/',
+				path: 'dvornikov.net',
+				period: {
+					id: 'period-2019',
+					text: '2019'
+				}
+			},
+			{
+				name: 'ППР',
+				type: '#онлайн-сервисы',
+				stagesArr: [['верстка', 'интеграция'], ['техподдержка']],
+				aboutProject: 'Сайт компании по продаже топливных карт сети АЗС Газпром',
+				href: 'https://gpc-store.ru/',
+				path: 'gpc-store.ru'
+			},
+			{
+				name: 'Проект Aidem <br> «Мобильная версия»',
+				type: '#лендинги',
+				stagesArr: [['дизайн', 'вёрстка']],
+				aboutProject: 'Лендинг «Без мобильной версии уже нельзя»',
+				href: 'https://wakeup.aidem.ru/',
+				path: 'wakeup.aidem.ru'
+			},
+			{
+				name: 'Проект Ночлежки <br> «Эспресс-помощь»',
+				type: '#благотворительность',
+				stagesArr: [['дизайн', 'вёрстка'], ['интеграция']],
+				aboutProject: 'Сайт регулярной акции в помощь бездомным',
+				href: 'https://espress-help.ru/',
+				path: 'espress-help.ru',
+				period: {
+					id: 'period-2018',
+					text: '2018'
+				}
+			},
+			{
+				name: 'Фонд профилактики <br> рака «Не напрасно»',
+				type: '#благотворительность',
+				stagesArr: [['дизайн', 'вёрстка'], ['интеграция']],
+				aboutProject: 'Сайт благотворительного фонда профилактики рака',
+				href: 'https://nenaprasno.ru/',
+				path: 'nenaprasno.ru'
+			},
+			{
+				name: 'OPP-Shop',
+				type: '#e-commerce',
+				stagesArr: [['дизайн', 'вёрстка'], ['интеграция', 'техподдержка']],
+				aboutProject: 'Интернет-магазин профессиональной косметики',
+				href: 'https://opp-shop.ru/',
+				path: 'opp-shop.ru'
+			},
+
+			{
+				name: '«Ночлежка»',
+				type: '#благотворительность',
+				stagesArr: [['дизайн', 'вёрстка'], ['интеграция', 'техподдержка']],
+				aboutProject: 'Сайт благотворительной организации помощи бездомным',
+				href: 'https://homeless.ru/',
+				path: 'homeless.ru',
+				period: {
+					id: 'period-2017',
+					text: '2017'
+				}
+			},
+			{
+				name: 'Миэль',
+				type: '#недвижимость',
+				stagesArr: [['дизайн', 'вёрстка'], ['интеграция']],
+				aboutProject: 'Сайт сети агентств недвижимости',
+				href: 'https://sale.miel.ru/',
+				path: 'sale.miel.ru'
+			},
+			{
+				name: 'Тарелка',
+				type: '#корпоративные_сайты',
+				stagesArr: [['техподдержка']],
+				aboutProject: 'Сайт сети ресторанов общественного питания',
+				href: 'https://tarelkas.ru/',
+				path: 'tarelkas.ru'
+			},
+			{
+				name: 'ППР',
+				type: '#онлайн-сервисы',
+				stagesArr: [['вёрстка', 'интеграция'], ['техподдержка']],
+				aboutProject: 'Сайт компании по продаже топливных карт сети АЗС Газпром',
+				href: 'https://petrolplus.ru/',
+				path: 'petrolplus.ru',
+				period: {
+					id: 'period-early-project',
+					text: 'ранние проекты'
+				}
+			},
+			{
+				name: 'ППР',
+				type: '#онлайн-сервисы',
+				stagesArr: [['вёрстка', 'интеграция'], ['техподдержка']],
+				aboutProject: 'Сайт компании по продаже топливных карт сети АЗС Газпром',
+				href: 'https://petrolcards.ru/',
+				path: 'petrolcards.ru'
+			},
+			{
+				name: 'Бергамотик',
+				type: '#e-commerce',
+				stagesArr: [['дизайн', 'вёрстка'], ['интеграция', 'техподдержка']],
+				aboutProject: 'Сайт интернет-магазина продуктов и напитков',
+				href: 'https://bergamotik.ru/',
+				path: 'bergamotik.ru'
+			}
+		]
+
+	section.project-all
+		.container
+			.project-all__periods
+				.project-all__periods-col
+					.project-all__period.project-all__period--active(id='period-2019')
+						.project-all__period-year #[span 2019]
+						ul.project-all__period-list
+							li.project-all__period-item #лендинги
+							li.project-all__period-item #онлайн-сервисы
+
+				.project-all__periods-col
+					.project-all__period(id='period-2018')
+						.project-all__period-year #[span 2018]
+						ul.project-all__period-list
+							li.project-all__period-item #онлайн-сервисы
+							li.project-all__period-item #e-commerce
+							li.project-all__period-item #корпоративные_сайты
+							li.project-all__period-item #благотворительность
+
+				.project-all__periods-col
+					.project-all__period(id='period-2017')
+						.project-all__period-year #[span 2017]
+						ul.project-all__period-list
+							li.project-all__period-item #лендинги
+							li.project-all__period-item #онлайн-сервисы
+							li.project-all__period-item #корпоративные_сайты
+							li.project-all__period-item #недвижимость
+							li.project-all__period-item #благотворительность
+
+				.project-all__periods-col
+					.project-all__period(id='period-early-project')
+						.project-all__period-year #[span ранние#[br]проекты]
+						ul.project-all__period-list
+							li.project-all__period-item #лендинги
+							li.project-all__period-item #онлайн-сервисы
+							li.project-all__period-item #корпоративные_сайты
+							li.project-all__period-item #e-commerce
+							li.project-all__period-item #недвижимость
+
+			.project-all__slider-wrap
+				.project-all__slider.swiper-container
+					.swiper-wrapper
+						each slide, i in projectList
+							- const { name, type, stagesArr, aboutProject, href, path, period } = slide
+
+							mixin TemplateItem()
+								if period
+									.project-all__item.swiper-slide(data-period= period.id)
+										block
+								else
+									.project-all__item.swiper-slide
+										block
+
+							+TemplateItem()
+								if period
+									.project-all__period-year #[span= period.text]
+								+Card('project-all__slide-card').card--blue.card--mark
+									h3.project-all__name.content-highlight #[span!= name]
+									.project-all__type!= type
+									.project-all__project-stages
+										each stages, k in stagesArr
+											ul.project-all__project-stages-list
+												each stage, l in stages
+													li.project-all__project-stages-item!= stage
+									.project-all__project-about!= aboutProject
+									.project-all__slide-card-link
+										a.content-link(href= href target='_blank')!= path
+
+				+BtnArrow().project-all__btn-arrow.btn-arrow--left.slider-btn-arrow
+				+BtnArrow().project-all__btn-arrow.btn-arrow--right.slider-btn-arrow
+
+			.project-all__nda
+				.project-all__nda-text /и&nbsp;другие компании, о&nbsp;которых мы&nbsp;не&nbsp;можем рассказать в&nbsp;связи с&nbsp;NDA
+				.project-all__nda-img-wrap
+					img(class='project-all__nda-img wow' src='img/nda.svg' alt='NDA')

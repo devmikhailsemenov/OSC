@@ -1,0 +1,10 @@
+mixin NumberedLines(className, numbers, static)
+	- const classes = className ? `numbered-lines ${className}` : 'numbered-lines'
+	- const numbersClasses = static !== true ? 'numbered-lines__numbers js-lines-numbers' : 'numbered-lines__numbers'
+
+	div(class= classes)
+		div(class= numbersClasses)
+			if numbers
+				each number, i in numbers
+					.numbered-lines__numbers-item= number
+		block

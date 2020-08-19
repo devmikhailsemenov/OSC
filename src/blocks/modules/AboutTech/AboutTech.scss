@@ -1,0 +1,176 @@
+.about-tech {
+	padding: 40px 0;
+	background: url('../img/about-tech.svg');
+
+	.numbered-lines__numbers {
+		color: #000;
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	&__title-wrap {
+		margin-bottom: 36px;
+	}
+
+	&__card {
+		width: 100%;
+		font-weight: 400;
+
+		&::before, &::after {
+			display: none;
+		}
+	}
+
+	&__card--backend {
+		.about-tech__card-info {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__card--right {
+		.card__content {
+			padding-bottom: 0;
+			border: none;
+			background-color: transparent;
+		}
+	}
+
+	&__card-title {
+		margin-bottom: 15px;
+	}
+
+	&__card-info {
+		@include mb(30px);
+	}
+
+	&__row {
+		flex-wrap: wrap;
+	}
+
+	&__col {
+		max-width: 100%;
+		flex: 0 0 100%;
+		@include mb(6px);
+	}
+
+	&__skills {
+		margin-top: 20px;
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 700;
+	}
+
+	&__bottom {
+		border-top: 3px solid #222BFD;
+		margin: 0 -20px -20px;
+		padding: 6px 6px 10px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 18px;
+	}
+
+	&__face-icon {
+		width: 36px;
+	}
+
+	&__computer-icon {
+		position: absolute;
+		top: -100px;
+		right: 32px;
+		width: 72px;
+		height: 93px;
+	}
+}
+
+@include min(992px) {
+	.about-tech {
+
+		&__title-wrap {
+			margin-bottom: 79px;
+		}
+
+		&__row {
+			justify-content: space-between;
+		}
+
+		&__col {
+			max-width: 477px;
+			width: 100%;
+			flex: 0 0 auto;
+			margin-bottom: 0;
+		}
+
+		&__card {
+			height: 100%;
+
+			.card__content {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				padding-right: 29px;
+			}
+		}
+
+		&__card--backend {
+			.about-tech__card-info {
+				margin-bottom: 80px;
+			}
+		}
+
+		&__card--right {
+			.card__content {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		&__card-content {
+			padding: 24px 29px;
+		}
+
+		&__card-info:not(.about-tech__card-info--last) {
+			flex: 1 0 0;
+		}
+
+		&__card-title {
+			margin-bottom: 19px ;
+		}
+
+		&__skills {
+			font-size: 20px;
+			line-height: 27px;
+			margin-top: 32px;
+		}
+
+		&__bottom {
+			border-top: 4px solid #222BFD;
+			margin: 0 -29px -24px;
+			padding: 8px 8px 8px 29px;
+			font-size: 26px;
+		}
+
+		&__face-icon {
+			width: 53px;
+		}
+
+		&__computer-icon {
+			top: -62px;
+			transform: translateY(-50%);
+			width: 138px;
+			height: 179px;
+		}
+	}
+}
+
+@include min(1200px) {
+	.about-tech {
+		padding: 62px 0 80px;
+
+		&__col {
+			max-width: 485px;
+		}
+	}
+}

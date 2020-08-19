@@ -1,0 +1,79 @@
+mixin Partners()
+	-
+		const partners = [
+			{
+				title: 'Agima',
+				text: '/входит в топ-5 <br> digital-дизайн студий Санкт-Петербурга',
+				link: { href: 'https://agima.ru/', path: 'agima.ru' }
+			},
+			{
+				title: 'Notamedia',
+				text: '/входит в TOП-10 ведущих <br> digital-production',
+				link: { href: 'https://nota.media/', path: 'nota.media' }
+			},
+			{
+				title: 'ONY',
+				text: '/входит в ТОП-5 digital <br> дизайн-студий России',
+				link: { href: 'https://ony.ru/', path: 'ony.ru' }
+			},
+			{
+				title: 'POSSIBLE',
+				text: '/digital-агентство №1 <br> по версии Tagline',
+				link: { href: 'https://possiblegroup.ru/', path: 'possiblegroup.ru' }
+			},
+			{
+				title: 'i-will',
+				text: '/входит в ТОП-100 ведущих <br> веб-студий России',
+				link: { href: 'https://i-will.ru/', path: 'i-will.ru' }
+			},
+			{
+				title: 'MST',
+				text: '/входит в ТОП-10 <br> digital-агентств России',
+				link: { href: 'https://mstagency.ru/', path: 'mstagency.ru' }
+			},
+			{
+				title: 'СПАЙК COMMUNITY',
+				text: '/ассоциация профильных <br> продакшенов',
+				link: { href: 'https://spike.community/', path: 'spike.community' }
+			},
+			{
+				title: 'Медиасфера',
+				text: '/входит в ТОП-100 <br> SMM-агентств России',
+				link: { href: 'https://media-sfera.com/', path: 'media-sfera.com' }
+			},
+			{
+				title: 'Astra Media Group',
+				text: '/входит в ТОП-100 <br> digital-агентств России',
+				link: { href: 'https://astramg.ru/', path: 'astramg.ru' }
+			}
+		]
+
+	section.partners
+		.container
+			.partners__section-content.section-content
+				.partners__partners-list-wrap
+					.partners__row.section-row
+						each partner, i in partners
+							- const { title, text, link } = partner
+
+							.partners__col.section-col
+								+Card('partners__item').card--dotted.card--green.card--only-mobile
+									.card__highlight-title.content-highlight
+										span!= title
+									p.card__descr!= text
+									.card__link-wrap
+										a(href= link.href target='_blank').card__link.content-link!= link.path
+				.partners__call-cooperation
+					.section-row
+						.partners__call-cooperation-col.section-col
+							+Card('partners__call-cooperation-card').card--dotted
+								p.partners__call-cooperation-text.
+									хотите стать нашими партнерами? Напишите
+									#[a(href='mailto:info@os-company.ru').content-link info@os-company.ru]
+
+
+
+
+
+
+
