@@ -41,12 +41,12 @@ const queueAnimateElems = (
 	 * не является первым по очереди при анимации, то showPreviousGroup показывает все элементы предыдущего блока
 	 * без анимации
 	 * @param  {Object} currentItem  - объект с текущей коллекцией элементов(дочерних) currentItem.elems, 
-	 * 								   попавших в область видимости окна
+	 * попавших в область видимости окна
 	 * @param  {Object} previousItem - объект с предыдущей коллекцией элементов(дочерних) previousItem.elems, 
-	 * 								   попавших в область видимости окна
-	 * @return {Object}              - если текущий и предыдущий элементы не связаны между собой, т.е.
-	 * 								   currentItem.elems[0].connective !== previousItem.elems[previousItem.elems.length - 1].elem.id,
-	 * 								   возвращается предыдущий элемент		   
+	 * попавших в область видимости окна
+	 * @return {Object} - если текущий и предыдущий элементы не связаны между собой, т.е.
+	 * currentItem.elems[0].connective !== previousItem.elems[previousItem.elems.length - 1].elem.id,
+	 * возвращается предыдущий элемент		   
 	 */
 	const showPreviousGroup = (currentItem, previousItem) => {
 		const currentFirstConnective = currentItem.elems[0].connective;
